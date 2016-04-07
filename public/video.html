@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--  @Shital April 6-2016 -->
 <head>
 
     <meta charset="utf-8">
@@ -42,8 +42,9 @@
           
           <div class="row">
                <div class="col-md-6 col-md-offset-3 col-xs-6  col-xs-offset-3 text-center">
-                    <fb:login-button autologoutlink="true" size="xlarge" scope="public_profile,email"   onlogin="checkLoginState();" padding-top="30px" >
-                    </fb:login-button>
+                    <!-- <fb:login-button autologoutlink="true" size="xlarge" scope="public_profile,email"   onlogin="checkLoginState();" padding-top="30px" >
+                    </fb:login-button> -->
+                    
                     <h3 id = "status"></h3>
                </div>
           </div>
@@ -150,6 +151,9 @@
 
 	<!--Facebook authentication -->
 	<script>
+	
+	/* Start: comment */
+	
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -163,13 +167,15 @@
       testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
-      window.location("https://video-manager-itu.herokuapp.com/")
+      <!-- window.location("https://video-manager-itu.herokuapp.com/") -->
+      window.location("https://video-manager-itu.herokuapp.com/") 
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
-      window.location("https://video-manager-itu.herokuapp.com/")
+     <!-- window.location("https://video-manager-itu.herokuapp.com/") -->
+     window.location("https://video-manager-itu.herokuapp.com/") 
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
 			document.getElementById('status').appendChild(document.getElementById('appear'));
@@ -187,7 +193,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '229731420707910',
+    appId      : '550763335105161',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -233,6 +239,17 @@
   }
   FB.Event.subscribe("auth.logout", function() {window.location = location.origin});
 
+  /*End : Comment */
+  /* function testAPI() {
+	    console.log('Welcome!  Fetching your information.... ');
+	    
+	      console.log('Successful login for: ' + response.name);
+	      document.getElementById('status').innerHTML =
+	        'Thanks for logging in, Dear !';	
+	    
+	  } */
+  
+  
 </script>
 
 </body>
