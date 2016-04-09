@@ -1,17 +1,16 @@
 {
-  "name": "video-uploader-mahi",
-  "version": "0.0.1",
-  "private": true,
+  "name": "video-uploader-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "binaryjs": "^0.2.1",
+    "express": "^3.21.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "node app.js"
   },
-  "dependencies": {
-    "binaryjs": "0.2.1",
-    "express": "^3.4.6"
-  },
-  "description": "A while back, if you wanted to stream binary data via JavaScript - such as audio/video content, you'd be sore out of luck :(",
-  "main": "app.js",
-  "devDependencies": {},
-  "author": "mahima srikanta",
+  "author": "shital dhamne",
   "license": "ISC"
 }
